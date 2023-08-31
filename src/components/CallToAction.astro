@@ -2,13 +2,14 @@
 interface Props {
 //   question: string;
   answer: string;
+  href: string
 }
 
-const { answer } = Astro.props;
+const { answer, href } = Astro.props;
 ---
 
 <div class="callToAction">
-  <a href="#">{answer}</a>
+  <a href={href}>{answer}</a>
 </div>
 
 <style>
