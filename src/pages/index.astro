@@ -135,17 +135,21 @@ import CallToAction from "../components/CallToAction.astro";
     letter-spacing: 0.2em;
   }
   @media screen and (max-width: 426px) {
-    h1 {
+    .Headline > h1 {
       /* text-align: justify; */
-      word-wrap: break-word;
-      overflow-wrap: break-word;
+      /* word-wrap: break-word;
+      overflow-wrap: break-word; */
       font-size: 2em;
 
-      hyphens: manual;
+      hyphens: auto;
       /* -webkit-hyphens: auto;
       -moz-hyphens: auto;
       -ms-hyphens: auto;
       hyphens: auto; */
+    }
+    .Headline > strong {
+      font-size: 1.5em;
+      line-height: 1;
     }
     p {
       /* text-align: justify; */
