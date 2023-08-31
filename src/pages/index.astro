@@ -7,8 +7,10 @@ import CallToAction from "../components/CallToAction.astro";
 <Layout title="Welcome to Astro.">
   <main>
     <section>
-      <h1>Por una Autoconvo&shy;cato&shy;ria en Exactas</h1>
-
+      <div class="Headline">
+        <h1>Levantémonos en defensa de nuestra educación y la investigación</h1>
+        <strong>Por una Autoconvo&shy;cato&shy;ria en Exactas</strong>
+      </div>
       <p>
         La educación está en la mira de un ataque sin precedentes. El recorte
         que viene sufriendo el presupuesto universitario impacta en faltantes de
@@ -110,12 +112,21 @@ import CallToAction from "../components/CallToAction.astro";
     font-size: 20px;
     line-height: 1.6;
   }
-  h1 {
+  .Headline {
+    margin-bottom: 1em;
+  }
+  .Headline > h1 {
     font-size: 4rem;
     font-weight: 700;
     line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: .25em;
+    /* text-align: center; */
+    /* margin-bottom: 1em; */
+  }
+  .Headline > strong {
+    font-size: 2em;
+    font-weight: 400;
+    font-style: italic;
   }
 
   .center {
