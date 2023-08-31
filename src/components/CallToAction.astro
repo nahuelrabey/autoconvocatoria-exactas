@@ -1,0 +1,67 @@
+---
+interface Props {
+//   question: string;
+  answer: string;
+}
+
+const { answer } = Astro.props;
+---
+
+<div class="callToAction">
+  <a href="#">{answer}</a>
+</div>
+
+<style>
+  .callToAction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .callToAction > h3 {
+    font-weight: bold;
+    text-align: center;
+  }
+  .callToAction > a {
+    padding: 1em 0;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+
+    font-weight: bolder;
+    font-size: 2em;
+
+    background: rgb(250, 29, 0);
+    background: linear-gradient(
+      45deg,
+      rgba(250, 29, 0, 1) 0%,
+      rgba(250, 113, 0, 1) 50%,
+      rgba(250, 29, 0, 1) 100%
+    );
+    /* transition: 0.25s all; */
+    background-size: 400% 400%;
+    animation: gradient 2.5s ease infinite;
+  }
+
+  .callToAction > a:hover {
+    /* background: rgb(250, 0, 144);
+    background: linear-gradient(
+      45deg,
+      rgba(250, 0, 144, 1) 0%,
+      rgba(250, 29, 0, 1) 100%
+    ); */
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
