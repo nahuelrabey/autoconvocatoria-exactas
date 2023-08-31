@@ -7,7 +7,7 @@ import CallToAction from "../components/CallToAction.astro";
 <Layout title="Welcome to Astro.">
   <main>
     <section>
-      <h1>Por una Autoconvocatoria en Exactas</h1>
+      <h1>Por una Autoconvo&shy;cato&shy;ria en Exactas</h1>
 
       <p>
         Durante este gobierno hubo un ajuste muy fuerte en las universidades. Se
@@ -53,14 +53,6 @@ import CallToAction from "../components/CallToAction.astro";
         docentes de la facultad.
       </p>
 
-      <p>
-        El gobierno actual está en retirada, y junto a ella trae una
-        <strong>hiperinflación</strong> una <strong>devaluación</strong> y un <strong
-          >ajuste</strong
-        > a la clase obrera. La única manera de enfrentar el ajuste futuro es
-        derrotar el ajuste actual.
-      </p>
-
       <h2>¿Cómo funcionaría?</h2>
 
       <p>
@@ -85,8 +77,21 @@ import CallToAction from "../components/CallToAction.astro";
         reclamo, y nuestra propia estrategia.
       </p>
 
+      <p class="center">...</p>
+
+      <p>
+        El gobierno actual está en retirada, y junto a ella trae una
+        <strong>hiperinflación</strong> una <strong>devaluación</strong> y un <strong
+          >ajuste</strong
+        > a la clase obrera. La única manera de enfrentar el ajuste futuro es
+        derrotar el ajuste actual.
+      </p>
+
       <h2>¿Querés sumarte a esto?</h2>
-      <CallToAction answer="¡Sí ✊🔥!" href="https://forms.gle/57Q2PKQFpHd197Kx9"/>
+      <CallToAction
+        answer="¡Sí ✊🔥!"
+        href="https://forms.gle/57Q2PKQFpHd197Kx9"
+      />
     </section>
   </main>
 </Layout>
@@ -107,5 +112,34 @@ import CallToAction from "../components/CallToAction.astro";
     line-height: 1;
     text-align: center;
     margin-bottom: 1em;
+  }
+
+  .center {
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 0.20em;
+  }
+  @media screen and (max-width: 426px) {
+    h1 {
+      /* text-align: justify; */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      font-size: 2em;
+
+      hyphens: manual;
+      /* -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto; */
+    }
+    p {
+      /* text-align: justify; */
+
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+
+      /* hyphens: auto; */
+      font-size: 1.2rem;
+    }
   }
 </style>
