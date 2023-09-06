@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CallToAction from "../components/CallToAction.astro";
+import { Icon } from "astro-icon";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -9,6 +10,10 @@ import CallToAction from "../components/CallToAction.astro";
       <div class="Headline">
         <h1>Levantémonos en defensa de nuestra educación y la investigación</h1>
         <strong>Por una Autoconvo&shy;cato&shy;ria en Exactas</strong>
+        <a href="https://forms.gle/57Q2PKQFpHd197Kx9" target="_blank">
+          <p>Sumate!</p>
+          <Icon name="form" />
+        </a>
       </div>
       <p>
         La educación está en la mira de un ataque sin precedentes. El recorte
@@ -98,9 +103,8 @@ import CallToAction from "../components/CallToAction.astro";
         organizarnos ya mismo por nuestros reclamos.
       </p>
 
-      <h2>¿Querés sumarte a esto?</h2>
       <CallToAction
-        answer="¡Sí ✊🔥!"
+        answer="¿Querés sumarte?"
         href="https://forms.gle/57Q2PKQFpHd197Kx9"
       />
     </section>
@@ -129,9 +133,39 @@ import CallToAction from "../components/CallToAction.astro";
     /* margin-bottom: 1em; */
   }
   .Headline > strong {
+    display: block;
     font-size: 2em;
     font-weight: 400;
     font-style: italic;
+  }
+  .Headline > a {
+    margin-top: .5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    text-decoration: none;
+    /* text-align: center; */
+    color: black;
+    padding: .5em;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: 0.25s all;
+  }
+  .Headline > a:hover {
+    font-weight: bold;
+  }
+  .Headline > a:active {
+    background-color: black;
+    color: white;
+  }
+  .Headline > a > p{
+    padding: 0;
+    margin: 0;
+  }
+
+  [astro-icon] {
+    height: 1.5em;
   }
 
   .center {
